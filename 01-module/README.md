@@ -37,11 +37,11 @@ for project 1 you will work on a programming project implementing a lexer to gen
 
 ## 01.1 - lexical analysis: language and syntax  
 
-
-
 ## 01.2 - lexical analysis: regular expressions  
 
 ## 01.3 - lexical analysis: concatenation  
+
+concatenation operation on regular expressions is defined as L(R1 • R2) = L(R1) • L(R2) and R1 • R2 = { xy : \in R1 & y \in R2 }
 
 ## 01.4 - lexical analysis: kleene star  
 
