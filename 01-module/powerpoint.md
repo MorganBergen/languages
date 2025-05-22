@@ -1,6 +1,18 @@
 #  principles of programming languages
 
-###  what is a programming languages
+**contents**
+1.  [what is a programming language](#what-is-a-programming-languages)
+2.  [how does the computer understand your instructions](#how-does-the-computer-understand-your-instructions)
+3.  [how do they work](#how-do-they-work)
+4.  [compiler](#compiler)
+5.  [relocation](#relocation)
+6.  [linker](#linker)
+7.  [loader](#loader)
+8.  [create a process](#create-a-process)
+9.  [overview of program interpretation](#overview-of-program-interpretation)
+10.  [what makes a program valid?](#what-makes-a-program-valid)
+
+###  what is a programming language
 
 -  a structured way to define computation
 -  is it the only definition /  purpose?
@@ -59,11 +71,9 @@ uses relation table to find lines of code to be replaced and then uses the symbo
 
 ###  loader
 
-takes the output of linker and copies them to memory
-
 <img src="./loader.svg" alt="loader" style="width: 400px;"/>
 
-###  loader
+takes the output of linker and copies them to memory
 
 <img src="./0-loader.svg" alt="0-loader" style="width: 400px;"/>
 
@@ -78,3 +88,9 @@ takes the output of linker and copies them to memory
 ###  overview of program interpretation
 
 <img src="./interpretation.svg" alt="interpretation" style="width: 400px;"/>
+
+###  what makes a program valid?
+
+1.  **syntax**  what does it mean to look like a valid program?
+2.  **semantics**  what does it mean for a program to be valid?
+3.  **correctness**  is the program the correct one for the job?
