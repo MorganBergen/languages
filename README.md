@@ -1,16 +1,16 @@
 #  languages
 
-##  content
+##  [**01 regular expressions**](01-module/README.md)  
+[01.0 - overview](01-module/README.md#010---overview)  
+[01.1 - lexical analysis: language and syntax](01-module/README.md#011---lexical-analysis-language-and-syntax)  
+[01.2 - lexical analysis: regular expressions](01-module/README.md#012---lexical-analysis-regular-expressions)  
+[01.3 - lexical analysis: concatenation](01-module/README.md#013---lexical-analysis-concatenation)  
+[01.4 - lexical analysis: kleene star](01-module/README.md#014---lexical-analysis-kleene-star)  
+[01.5 - lexical analysis: regular expression examples](01-module/README.md#015---lexical-analysis-regular-expression-examples)  
+[01.6 - lexical analysis: longest matching prefix rule](01-module/README.md#016---lexical-analysis-longest-matching-prefix-rule)  
+[01.7 - practice quiz](01-module/README.md#017---practice-quiz)
 
-[**01 - regular expressions**](01-module/README.md)  
-01.0 - overview  
-01.1 - lexical analysis: language and syntax  
-01.2 - lexical analysis: regular expressions  
-01.3 - lexical analysis: concatenation  
-01.4 - lexical analysis: kleene star  
-01.5 - lexical analysis: regular expression examples  
-01.6 - lexical analysis: longest matching prefix rule  
-01.7 - practice quiz 
+---
 
 **module 2: syntax and analysis parsing**  
 2.0: overview  
