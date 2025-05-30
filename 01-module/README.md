@@ -1,30 +1,68 @@
-#  01 regular expressions
+#  01 regular expressions 
 
-[→ back](../README.md) 
+######  [← back](../README.md) 
 
-[01.0 - overview](#010---overview)  
-[01.1 - lexical analysis: language and syntax](#011---lexical-analysis-language-and-syntax)  
-    
-[01 principles of programming languages](#01-principles-of-programming-languages)
+## table of contents   
 
-[02 lexical analysis](#02-lexical-analysis)
+<small>[overview](#overview)</small>  
+<small>[outcomes/objectives](#outcomesobjectives)</small>  
+<small>[activities](#activities)</small>  
+<small>[textbook readings](#textbook-readings)</small>  
+<small>[lexical analysis: language and syntax](#lexical-analysis-language-and-syntax)</small>  
+<small>[lexical analysis: regular expressions](#lexical-analysis-regular-expressions)</small>  
+<small>[lexical analysis: concatenation](#lexical-analysis-concatenation)</small>  
+<small>[lexical analysis: kleene star](#lexical-analysis-kleene-star)  </small>  
+<small>[lexical analysis: regular expression examples](#lexical-analysis-regular-expression-examples)</small>  
+<small>[lexical analysis: longest matching prefix rule](#lexical-analysis-longest-matching-prefix-rule)</small>  
+<small>[practice quiz](#practice-quiz)</small>  
 
-[01.2 - lexical analysis: regular expressions](#012---lexical-analysis-regular-expressions)  
+##  powerpoint presentations
+
+<details><summary><small>principles of programming languages</small></summary>
+
+<br>  
+
+<small>[principles of programming languages](#principles-of-programming-languages)</small>  
+<small>[what is a programming language](#what-is-a-programming-language)</small>  
+<small>[how does the computer understand your instructions](#how-does-the-computer-understand-your-instructions)</small>  
+<small>[how do they work](#how-do-they-work)</small>  
+<small>[compiler](#compiler)</small>  
+<small>[relocation](#relocation)</small>  
+<small>[linker](#linker)</small>  
+<small>[loader](#loader)</small>  
+<small>[create a process](#create-a-process)</small>  
+<small>[overview of program interpretation](#overview-of-program-interpretation)</small>  
+<small>[what makes a program valid?](#what-makes-a-program-valid)</small>  
+</details>
 
 
-[01.3 - lexical analysis: concatenation](#013---lexical-analysis-concatenation)  
-[01.4 - lexical analysis: kleene star](#014---lexical-analysis-kleene-star)  
-[01.5 - lexical analysis: regular expression examples](#015---lexical-analysis-regular-expression-examples)  
-[01.6 - lexical analysis: longest matching prefix rule](#016---lexical-analysis-longest-matching-prefix-rule)  
-[01.7 - practice quiz](#017---practice-quiz)
+<details><summary><small>lexical analysis</small></summary>  
 
-## 01.0 - overview  
+<br>  
 
-**overview**
+<small>[lexical analysis](#lexical-analysis)</small>  
+<small>[language syntax](#language-syntax)</small>  
+<small>[strings](#strings)</small>  
+<small>[languages](#languages)</small>  
+<small>[regular expressions](#regular-expressions)</small>  
+<small>[$L \left( R_{1} \mid R_{2} \right) = L \left( R_{1} \right) \cup L \left( R_{2}\right)$](#l-r1-r2-l-r1-l-r2)</small>  
+<small>[$L \left( R_{1} \cdot R_{2} \right) = L \left( R_{1} \right) \cdot L \left( R_{2}\right)$](#l-r1-r2-l-r1-l-r2)</small>  
+<small>[operator precedence](#operator-precedence)</small>  
+<small>[regular expressions](#regular-expressions-1)</small>  
+<small>[kleene star](#kleene-star)</small>  
+<small>[$L \left(R^{*} \right) = \bigcup_{i \geq 0} {{L}^{i} \left(R \right)}$](#l-r-l-i-ge-0-l-i-r)</small>  
+<small>[tokens](#tokens)</small>  
+<small>[lexical analysis](#lexical-analysis)</small>  
+<small>[longest matching prefix rule](#longest-matching-prefix-rule)</small>  
+<small>[mariner 1](#mariner-1)</small>  
+<small>[lexical analysis continued](#lexical-analysis-continued)</small>
+</details>  
+
+##  overview  
 
 lexical analysis is the process of checking the syntac of a given programming language.  in lexical analysis, regular expressions are used as a way to represent the tokens of a programming language.  longest matching prefix rule says that if there are more than one match, the longest match should be returned and is a way of resolving ambiguity when there are multiple matches. 
 
-**outcomes/objectives**
+##  outcomes/objectives
 
 1.  explain what lexical analysis is
 2.  describe what regular expressions are
@@ -33,19 +71,16 @@ lexical analysis is the process of checking the syntac of a given programming la
 5.  write regular expressions for a given token
 6.  apply the longest matching prefix rule
 
-**activities**
+##  activities
 
-[lecture videos](./lecture-video.md)  
-[powerpoint presentation](./powerpoint.md)    
 [homework 1](./01-homework.md)  
 [project 1](./01-project.md)  
-[practice quiz](./practice-quiz.md)  
 
 for project 1 you will work on a programming project implementing a lexer to generate toakens as discussed in this chapter.  refer to the project manual for complete details and the accompanying zip file for the starter code with some implementation.  refer to the project manual (instructions and implementation guide) for submission details.
 
 your submission will be checked for plagiarism.  refer to the asu integrity policy.  collaboration with peers, getting coding help from outsite, and copying code from online resources such as github repositories, course hero, and chegg are not allowed.  you are not allowed to share the code or host it in a public repository.
 
-**textbook readings**
+##  textbook readings
 
 **programming languages: principles and practice**
 
@@ -58,25 +93,15 @@ your submission will be checked for plagiarism.  refer to the asu integrity poli
 
 - [ ] chapter 2 - scanning - section 2.2 regular expressions
 
-## 01.1 - lexical analysis: language and syntax  
+----------
+
+##  lexical analysis: language and syntax 
 
 overview of programming languages.
 
 what is a programming language, how does it work, and how does the computer know what to do?  view the following powerpoint to learn more.  
 
-###  01 principles of programming languages
-
-**contents**
-1.  [what is a programming language](#what-is-a-programming-language)
-2.  [how does the computer understand your instructions](#how-does-the-computer-understand-your-instructions)
-3.  [how do they work](#how-do-they-work)
-4.  [compiler](#compiler)
-5.  [relocation](#relocation)
-6.  [linker](#linker)
-7.  [loader](#loader)
-8.  [create a process](#create-a-process)
-9.  [overview of program interpretation](#overview-of-program-interpretation)
-10.  [what makes a program valid?](#what-makes-a-program-valid)
+##  principles of programming languages
 
 ###  what is a programming language
 
@@ -116,7 +141,7 @@ relative references for functions define in your code
 
 symbolic references for functions not defined in your code
 
-<img src="./compiler.svg" alt="compiler" style="width: 400px;"/>
+<img src="./assets/compiler.svg" alt="compiler" style="width: 400px;"/>
 
 ###  relocation
 
@@ -129,7 +154,7 @@ symbolic references for functions not defined in your code
 
 uses relation table to find lines of code to be replaced and then uses the symbol tables to find which functions have to be used.
 
-<img src="./table.svg" alt="table" style="width: 400px;"/>
+<img src="./assets/table.svg" alt="table" style="width: 400px;"/>
 
 1.  create 1 output binary (merged), start at 0
 2.  fix all local references with global relative addresses
@@ -137,11 +162,11 @@ uses relation table to find lines of code to be replaced and then uses the symbo
 
 ###  loader
 
-<img src="./loader.svg" alt="loader" style="width: 400px;"/>
+<img src="./assets/loader.svg" alt="loader" style="width: 400px;"/>
 
 takes the output of linker and copies them to memory
 
-<img src="./0-loader.svg" alt="0-loader" style="width: 400px;"/>
+<img src="./assets/0-loader.svg" alt="0-loader" style="width: 400px;"/>
 
 ###  create a process
 
@@ -153,7 +178,7 @@ takes the output of linker and copies them to memory
 
 ###  overview of program interpretation
 
-<img src="./interpretation.svg" alt="interpretation" style="width: 400px;"/>
+<img src="./assets/interpretation.svg" alt="interpretation" style="width: 400px;"/>
 
 ###  what makes a program valid?
 
@@ -167,25 +192,7 @@ lexical analysis
 
 a programming language must have a clearly specified syntax.  lexical analysis is the process of checking the syntax of a given programming language.  refer to the lexical analysis powerpoint and watch the video below for more information.
 
-###  02 lexical analysis
-
-**contents**
-
-1.  [language syntax](#language-syntax)
-2.  [strings](#strings)
-3.  [languages](#languages)
-4.  [regular expressions](#regular-expressions)
-5.  [$L \left( R_{1} \mid R_{2} \right) = L \left( R_{1} \right) \cup L \left( R_{2} \right)$](#l-r1-r2-l-r1-l-r2)
-6.  [$L \left( R_{1} \cdot R_{2} \right) = L \left( R_{1} \right) \cdot L \left( R_{2} \right)$](#l-r1-r2-l-r1-l-r2)
-7.  [operator precedence](#operator-precedence)
-8.  [regular expressions](#regular-expressions-1)
-9.  [kleene star](#kleene-star)
-10. [$L \left(R^{*} \right) = \bigcup_{i \geq 0} {{L}^{i} \left(R \right)}$](#l-r-l-i-ge-0-l-i-r)
-11. [tokens](#tokens)
-12. [lexical analysis](#lexical-analysis)
-13. [longest matching prefix rule](#longest-matching-prefix-rule)
-14. [mariner 1](#mariner-1)
-15. [lexical analysis continued](#lexical-analysis-continued)
+##  lexical analysis
 
 ###  language syntax
 
@@ -217,11 +224,11 @@ a programming language must have a clearly specified syntax.  lexical analysis i
 
 ###  lexical analysis continued
 
-## 01.2 - lexical analysis: regular expressions  
+## lexical analysis: regular expressions  
 
 in lexical analysis, regular expressions are used as a way to represent tokens of a programming language
 
-## 01.3 - lexical analysis: concatenation  
+## lexical analysis: concatenation  
 
 concatenation operation on regular expressions is defined as 
 
@@ -229,21 +236,21 @@ $L \left( R_{1} . R_{2} \right) = L \left( R_{1} . R_{2} \right)$
 
 $R_1 \cdot R_2 = \{ xy \mid x \in R_1 \text{ and } y \in R_2 \}$
 
-## 01.4 - lexical analysis: kleene star  
+##  lexical analysis: kleene star  
 
 kleene star operator is an operation performed on regular expressions.  it is denoted as
 
 $L \left( R^{*}\right) . \; L \left(R^{*} \right)= \{ \varepsilon \} \; \cup \; L\left(R\right) \cup \; L\left( R \right) . \; L\left( R \right) \cup L\left( R \right) . \; L\left( R \right) . \; L\left( R \right) \cup \cdots$
 
-## 01.5 - lexical analysis: regular expression examples  
+##  lexical analysis: regular expression examples  
 
 in this video we will see some examples of how regular expressions are used.
 
-## 01.6 - lexical analysis: longest matching prefix rule  
+##  lexical analysis: longest matching prefix rule  
 
 longst matching prefix rule says that if there are more than one match, the longest match should be returned.  this is a way of resolving ambiguity when there are multiple matches.
 
-## 01.7 - practice quiz  
+##  practice quiz  
 
 the questions in this quiz are derived from the content presented in module 1.  the practice quiz is intended as a knowledge check for mastery of objectives in this module.  it provides a sample of questions you will see in the midterm exam for the course.
 
@@ -261,3 +268,20 @@ Token LexicalAnalyzer::GetToken() {
     }
 }
 ```
+
+
+#  chapter 1 - introduction
+
+##  section 1.1 origins of programming languages
+
+
+##  section 1.4 language definition  
+##  section 1.5 language translation
+
+#  chapter 6 - syntax
+
+##  section 6.1 lexical structure of programming languages  
+
+#  chapter 2 - scanning
+
+##  section 2.2 regular expressions
