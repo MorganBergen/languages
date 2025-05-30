@@ -17,4 +17,18 @@ we divide the study of scanner issues as follows.  first, we give an overview of
 
 <small>
 
+it is the job of the scanner to read characters from the source code and form them into logical units to be dealt with by further parts of the compiler (usually the parser).  the logical units the scanner generates are called **tokens**, and forming characters into tokens is much like forming characters into words in an english sentence and deciding which word is meant.  in this it resembles the task of spelling.
+
+tokens are logical entities that are usually defined as an enumerated type.  for example, tokens might be defined in C as
+
+```C
+typedef enum 
+    {IF, THEN, ELSE, PLUS, MINUS, NUM, ID, ...}
+    TokenType;
+```
+
+tokens fall into several categories.  these includ ethe reserved words, such as `IF` and `THEN`,  which represent the strings of characters `if` and `then`.  a second category is that of special symbols, such as the arithmetic symbols `PLUS` and `MINUS`, which represents the characters `+` and `-`.  finally, there are tokens that can represent multiple stings.  examples are `NUM` and `ID`, which represent numbers and identifiers.
+
+
+
 </small>
