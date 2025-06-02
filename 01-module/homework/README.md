@@ -263,6 +263,23 @@ the next call to `getToken()` looks at the remaining input string to find the ne
 </small>
 
 
+
+$R_{0} = 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9$
+
+$R_{1} = 0 \mid 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9$
+
+$R_{2} = {\left( 0 \mid 1 \right)}^{*} R_{0} \left( 0 \mid 1 \right)$
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*}$
+
+$R_{4} = {R_{3}}^{*} {R_{2}}^{*} \; 000$
+
+$R_{4} = 00 \; \left({R_{0}}^* \left( 0 \mid 1\right)^{*}\right)^{*} \cdot ({\left( 0 \mid 1 \right)}^{*} R_{0} \left( 0 \mid 1 \right))^{*} \cdot \; 000$
+
+$R_{4} = 00 \; \left({\left( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9\right )}^* \left( 0 \mid 1\right)^{*}\right)^{*} \cdot ({\left( 0 \mid 1 \right)}^{*} {\left( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9\right )}^*  \left( 0 \mid 1 \right))^{*} \cdot \; 000$
+
+
+
 -------------
 
 #  example 1
