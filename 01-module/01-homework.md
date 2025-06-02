@@ -15,7 +15,7 @@ $R_{1} = 0 \mid 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9$
 
 $R_{2} = {\left( 0 \mid 1 \right)}^{*} R_{0} \left( 0 \mid 1 \right)$
 
-$R{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*}$
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*}$
 
 $R_{4} = {R_{3}}^{*} {R_{2}}^{*} \; 000$
 
@@ -29,6 +29,12 @@ assume that the longest prefix-matching rule is used.  assume that ties are brok
 6.  if `getToken()` is called repeatedly on the following input, what is the sequence of tokens returned?
 
     `99001101678100010101030123457000010`
+
+
+
+
+
+
 
 ##  02 problem
 
