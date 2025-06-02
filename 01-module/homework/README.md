@@ -79,6 +79,8 @@ $\left( 0 \mid 1 \right)^{*} = \empty, 0, 1, 00, 01, 10, 11, 000, 001, 001, 010,
 
 $\cdot$ (concatenation)
 
+$*$ kleene star operator, means zero or more occurrences of the preceding expression
+
 $R_{0} = 1, 2, 3, 4, 5, 6, 7, 8, \text{ or } 9$
 
 $\cdot$ (concatenation)
@@ -141,28 +143,51 @@ therefore there are an infinite number of strings that match $R_{2}$
 
 $R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*}$
 
+$00 = 00$ 
+
+$R_{0}^{*} = \{ ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 )^{*} \} = \{ 1 \}, \{ 2 \}, \{12\}, \{222\}, \{17294\}, \cdots$
+
+$\left( 0 \mid 1\right)^{*} = \{0\}, \{1\}, \{00\}, \{01\}, \{10\}, \{11\}, \{000\}, \{010\}, \cdots$
+
+$R_{0}^{*}$ is the set of all strings that can be formed by zero, one, or more occurrences of any single digit from 1 to 9, concatenated together.
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} = 00 \cdot 1 \cdot 0$
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} = 00 \cdot 1 \cdot 1$
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} = 00 \cdot 1 \cdot 0$
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} = 00 \cdot 1 \cdot 11$
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} = 00 \cdot 1 \cdot 00$
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} = 00 \cdot 2 \cdot 001$
+
+$R_{3} = 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} = 00 \cdot 72391 \cdot 0001011$
+
+therefore there are an infinite number of strings that match $R_{3}$
+
+$R_{4} = {R_{3}}^{*} {R_{2}}^{*} \; 000$
+
+$R_{4} = \{ {R_{3}}^{*} \} \cdot \{ {R_{2}}^{*} \} \cdot \{ 000 \}$
+
+$R_{4} = (\; 00 \; {R_{0}}^* \left( 0 \mid 1\right)^{*} \;)^{*}  \cdot (\{ {\left( 0 \mid 1 \right)}^{*} \} \; \cdot \{ R_{0} \} \cdot \; \{ \left( 0 \mid 1 \right) \}) \cdot 000$
+
+
 </small>
 
 
-
-
-
-
-
-
-
-
-
-
-
 -------------
-$R_{1} = \{ ( 0 \mid 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 ) \}$
 
-$R_{2} = \{ ( ( 0 \mid 1 )^{*} ) \cdot ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 ) \cdot ( 0 \mid 1 ) \}$
+$R_{0} = \{ ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 ) \}$  
 
-$R_{3} = \{ 00 \cdot ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 )^{*} \cdot ( 0 \mid 1 )^{*} \}$
+$R_{1} = \{ ( 0 \mid 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 ) \}$  
 
-$R_{4} = \{ ( 00 \cdot ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 )^{*} \cdot ( 0 \mid 1 )^{*} )^{*} \cdot 000 \}$
+$R_{2} = \{ ( ( 0 \mid 1 )^{*} ) \cdot ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 ) \cdot ( 0 \mid 1 ) \}$  
+
+$R_{3} = \{ 00 \cdot ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 )^{*} \cdot ( 0 \mid 1 )^{*} \}$  
+
+$R_{4} = \{ ( 00 \cdot ( 1 \mid 2 \mid 3 \mid 4 \mid 5 \mid 6 \mid 7 \mid 8 \mid 9 )^{*} \cdot ( 0 \mid 1 )^{*} )^{*} \cdot 000 \}$  
 
 ######  about
 
