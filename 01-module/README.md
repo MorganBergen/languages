@@ -1,66 +1,54 @@
-#  01 regular expressions 
+#  01 regular expressions
 
-######  [← back](../README.md) 
+######  [← back](../README.md)
 
-## table of contents   
+## table of contents  
 
-<small>[overview](#overview)</small>  
-<small>[outcomes/objectives](#outcomesobjectives)</small>  
-<small>[activities](#activities)</small>  
-<small>[textbook readings](#textbook-readings)</small>  
-<small>[lexical analysis: language and syntax](#lexical-analysis-language-and-syntax)</small>  
-<small>[lexical analysis: regular expressions](#lexical-analysis-regular-expressions)</small>  
-<small>[lexical analysis: concatenation](#lexical-analysis-concatenation)</small>  
-<small>[lexical analysis: kleene star](#lexical-analysis-kleene-star)  </small>  
-<small>[lexical analysis: regular expression examples](#lexical-analysis-regular-expression-examples)</small>  
-<small>[lexical analysis: longest matching prefix rule](#lexical-analysis-longest-matching-prefix-rule)</small>  
-<small>[practice quiz](#practice-quiz)</small>  
+1.  [overview](#overview)
+2.  [outcomes/objectives](#outcomesobjectives)
+3.  [activities](#activities)
+4.  [textbook readings](#textbook-readings)
+5.  [lexical analysis: language and syntax](#lexical-analysis-language-and-syntax)
+6.  [lexical analysis: regular expressions](#lexical-analysis-regular-expressions)
+7.  [lexical analysis: concatenation](#lexical-analysis-concatenation)
+8.  [lexical analysis: kleene star](#lexical-analysis-kleene-star)
+9.  [lexical analysis: regular expression examples](#lexical-analysis-regular-expression-examples)
+10. [lexical analysis: longest matching prefix rule](#lexical-analysis-longest-matching-prefix-rule)
+11.  [practice quiz](#practice-quiz)
 
-##  powerpoint presentations
+##  principles of programming languages
 
-<details><summary><small>principles of programming languages</small></summary>
+1.  [principles of programming languages](#principles-of-programming-languages)
+2.  [what is a programming language](#what-is-a-programming-language)
+3.  [how does the computer understand your instructions](#how-does-the-computer-understand-your-instructions)
+4.  [how do they work](#how-do-they-work)
+5.  [compiler](#compiler)
+6.  [relocation](#relocation)
+7.  [linker](#linker)
+8.  [loader](#loader)
+9.  [create a process](#create-a-process)
+10.  [overview of program interpretation](#overview-of-program-interpretation)
+11.  [what makes a program valid?](#what-makes-a-program-valid)
 
-<br>  
+##  lexical analysis</summary>
 
-<small>[principles of programming languages](#principles-of-programming-languages)</small>  
-<small>[what is a programming language](#what-is-a-programming-language)</small>  
-<small>[how does the computer understand your instructions](#how-does-the-computer-understand-your-instructions)</small>  
-<small>[how do they work](#how-do-they-work)</small>  
-<small>[compiler](#compiler)</small>  
-<small>[relocation](#relocation)</small>  
-<small>[linker](#linker)</small>  
-<small>[loader](#loader)</small>  
-<small>[create a process](#create-a-process)</small>  
-<small>[overview of program interpretation](#overview-of-program-interpretation)</small>  
-<small>[what makes a program valid?](#what-makes-a-program-valid)</small>  
-</details>
+1.  [lexical analysis](#lexical-analysis)
+2.  [language syntax](#language-syntax)
+3.  [strings](#strings)
+4.  [languages](#languages)
+5.  [regular expressions](#regular-expressions)
+8.  [operator precedence](#operator-precedence)
+9.  [regular expressions](#regular-expressions-1)
+10. [kleene star](#kleene-star)
+12. [tokens](#tokens)
+13. [lexical analysis](#lexical-analysis)
+14. [longest matching prefix rule](#longest-matching-prefix-rule)
+15. [mariner 1](#mariner-1)
+16. [lexical analysis continued](#lexical-analysis-continued)
 
+##  overview
 
-<details><summary><small>lexical analysis</small></summary>  
-
-<br>  
-
-<small>[lexical analysis](#lexical-analysis)</small>  
-<small>[language syntax](#language-syntax)</small>  
-<small>[strings](#strings)</small>  
-<small>[languages](#languages)</small>  
-<small>[regular expressions](#regular-expressions)</small>  
-<small>[$L \left( R_{1} \mid R_{2} \right) = L \left( R_{1} \right) \cup L \left( R_{2}\right)$](#l-r1-r2-l-r1-l-r2)</small>  
-<small>[$L \left( R_{1} \cdot R_{2} \right) = L \left( R_{1} \right) \cdot L \left( R_{2}\right)$](#l-r1-r2-l-r1-l-r2)</small>  
-<small>[operator precedence](#operator-precedence)</small>  
-<small>[regular expressions](#regular-expressions-1)</small>  
-<small>[kleene star](#kleene-star)</small>  
-<small>[$L \left(R^{*} \right) = \bigcup_{i \geq 0} {{L}^{i} \left(R \right)}$](#l-r-l-i-ge-0-l-i-r)</small>  
-<small>[tokens](#tokens)</small>  
-<small>[lexical analysis](#lexical-analysis)</small>  
-<small>[longest matching prefix rule](#longest-matching-prefix-rule)</small>  
-<small>[mariner 1](#mariner-1)</small>  
-<small>[lexical analysis continued](#lexical-analysis-continued)</small>
-</details>  
-
-##  overview  
-
-lexical analysis is the process of checking the syntac of a given programming language.  in lexical analysis, regular expressions are used as a way to represent the tokens of a programming language.  longest matching prefix rule says that if there are more than one match, the longest match should be returned and is a way of resolving ambiguity when there are multiple matches. 
+lexical analysis is the process of checking the syntac of a given programming language.  in lexical analysis, regular expressions are used as a way to represent the tokens of a programming language.  longest matching prefix rule says that if there are more than one match, the longest match should be returned and is a way of resolving ambiguity when there are multiple matches.
 
 ##  outcomes/objectives
 
@@ -73,8 +61,8 @@ lexical analysis is the process of checking the syntac of a given programming la
 
 ##  activities
 
-[homework 1](./01-homework.md)  
-[project 1](./01-project.md)  
+[homework 1](./01-homework.md)
+[project 1](./01-project.md)
 
 for project 1 you will work on a programming project implementing a lexer to generate toakens as discussed in this chapter.  refer to the project manual for complete details and the accompanying zip file for the starter code with some implementation.  refer to the project manual (instructions and implementation guide) for submission details.
 
@@ -85,9 +73,9 @@ your submission will be checked for plagiarism.  refer to the asu integrity poli
 **programming languages: principles and practice**
 
 - [ ] chapter 1 - introduction - section 1.1 origins of programming languages
-- [ ] chapter 1 - introduction - section 1.4 language definition  
+- [ ] chapter 1 - introduction - section 1.4 language definition
 - [ ] chapter 1 - introduction - section 1.5 language translation
-- [ ] chapter 6 - syntax - section 6.1 lexical structure of programming languages  
+- [ ] chapter 6 - syntax - section 6.1 lexical structure of programming languages
 
 **compiler construction: principles and practice**
 
@@ -95,11 +83,11 @@ your submission will be checked for plagiarism.  refer to the asu integrity poli
 
 ----------
 
-##  lexical analysis: language and syntax 
+##  lexical analysis: language and syntax
 
 overview of programming languages.
 
-what is a programming language, how does it work, and how does the computer know what to do?  view the following powerpoint to learn more.  
+what is a programming language, how does it work, and how does the computer know what to do?  view the following powerpoint to learn more.
 
 ##  principles of programming languages
 
@@ -148,7 +136,6 @@ symbolic references for functions not defined in your code
 -  table of pointers to lines of code that need linking to different libraries
     -  the symbolic references
 -  a symbol table is also created in this step, which has information about the symbols and what functions have to be loaded for a given symbol.
--  
 
 ###  linker
 
@@ -224,33 +211,33 @@ a programming language must have a clearly specified syntax.  lexical analysis i
 
 ###  lexical analysis continued
 
-## lexical analysis: regular expressions  
+## lexical analysis: regular expressions
 
 in lexical analysis, regular expressions are used as a way to represent tokens of a programming language
 
-## lexical analysis: concatenation  
+## lexical analysis: concatenation
 
-concatenation operation on regular expressions is defined as 
+concatenation operation on regular expressions is defined as
 
 $L \left( R_{1} . R_{2} \right) = L \left( R_{1} . R_{2} \right)$
 
 $R_1 \cdot R_2 = \{ xy \mid x \in R_1 \text{ and } y \in R_2 \}$
 
-##  lexical analysis: kleene star  
+##  lexical analysis: kleene star
 
 kleene star operator is an operation performed on regular expressions.  it is denoted as
 
 $L \left( R^{*}\right) . \; L \left(R^{*} \right)= \{ \varepsilon \} \; \cup \; L\left(R\right) \cup \; L\left( R \right) . \; L\left( R \right) \cup L\left( R \right) . \; L\left( R \right) . \; L\left( R \right) \cup \cdots$
 
-##  lexical analysis: regular expression examples  
+##  lexical analysis: regular expression examples
 
 in this video we will see some examples of how regular expressions are used.
 
-##  lexical analysis: longest matching prefix rule  
+##  lexical analysis: longest matching prefix rule
 
 longst matching prefix rule says that if there are more than one match, the longest match should be returned.  this is a way of resolving ambiguity when there are multiple matches.
 
-##  practice quiz  
+##  practice quiz
 
 the questions in this quiz are derived from the content presented in module 1.  the practice quiz is intended as a knowledge check for mastery of objectives in this module.  it provides a sample of questions you will see in the midterm exam for the course.
 
@@ -269,19 +256,70 @@ Token LexicalAnalyzer::GetToken() {
 }
 ```
 
-
-#  chapter 1 - introduction
-
-##  section 1.1 origins of programming languages
-
-
-##  section 1.4 language definition  
+##  section 1.4 language definition
 ##  section 1.5 language translation
 
 #  chapter 6 - syntax
 
-##  section 6.1 lexical structure of programming languages  
+##  section 6.1 lexical structure of programming languages
 
 #  chapter 2 - scanning
 
 ##  section 2.2 regular expressions
+
+-----
+
+#  chapter 1 - introduction
+
+###  origins of programming languages
+
+the following shows a rough timeline for teh creation of several of the major programming languages.  note that someo fthe languages are embedded in a family tree, indicating their evolutionary relationships.
+
+a definition often advanced for a programming language is a notation for communicating to a computerwhat we want it to do, but this definition is inadequate.  before the middle of the 1940s computer operators hardwired their programs.
+
+that is, they set switches to adjust the internal wiring of a computer to perform the requested tasks.  this effictively communicated to the computer what computations were desired, but programming, if it could be called that, consisted of the expensive and error prone activity of taking down the hardware to restructure it.  thsi section examines the origins and emergence of programming languages, which allowed computer users to solve problems without having to become hardware engineers.
+
+###  machine language and the first stored programs
+
+a major advance in computr design occurred in the late 1940s, when john von neumann had the idea that a computer should be permanently hardwired with a small set of general purpose operations.  the operator could then input into the computer a series of binary codes that would organize the basic hardware operations to solve more specific problems.  instead of turning
+
+###  language definition
+
+documentation for the early programming languages was written in an informal way, in ordinary english.  however, as we saw earlier in thsi chapter, programmers soon became aware of the need for mroe precise descriptions of a language.  to the pont of needing formal definitions of the kind found in mathematics.  for example, without a clear notion of the meaning of programming language constructs, a programmer has no clear idea of what computation is actually being performed.  moreover, it should be possible to reason mathematically about programs, and to do this requires formal verification or proof of the behavior of a program.  without a formal definition of a language this is impossible.
+
+but there are other compelling reasons for the need for a formal definition.  we have already mentioned the need for machine or implementation indpendence.  the best way to achieve this through standardization, which requires an independent and percise language definition th
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
